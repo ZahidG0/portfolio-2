@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiMenu, FiX } from 'react-icons/fi';
+import Image from 'next/image';
+import profileImg from '../assets/logo.png'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +42,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-            Portfolio
+            <Image src={profileImg} alt="Profile" width={40} height={40} className="rounded-full w-16 h-16" />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-10">
